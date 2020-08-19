@@ -15,16 +15,18 @@ type secretAgent struct {
 	ltk 	bool
 }
 func main() {
+		// field:value initialization
 		p1 := person{
 			first: "James",
 			last: "Bond",
 			age: 32,
 		}
 
+		// value initialization
 		p2 := person{
-			first: "Miss",
-			last: "Moneypenny",
-			age: 27,
+			"Miss",
+			"Moneypenny",
+			27,
 		}
 
 		fmt.Println(p1)
@@ -44,7 +46,8 @@ func main() {
 			ltk: true,
 		}
 		
-		fmt.Println(sa1.first, sa1.last, sa1.age, sa1.ltk)
+		// you can access values of embeded types both by treating them as promoted values  or by the full path
+		fmt.Println(sa1.first, sa1.last, sa1.person.age, sa1.ltk)
 
 		// Creating an anonymous struct
 		p := struct {
